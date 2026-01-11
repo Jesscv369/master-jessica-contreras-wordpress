@@ -5,7 +5,7 @@ get_header();
 
 <div>
     <div class="contenedortitulo">
-        <h1>Hola
+        <h1>
             <?php the_title();?>
         </h1>
     </div>
@@ -13,10 +13,18 @@ get_header();
     <section id="contenido">
         <?php echo the_content();?>
     </section>
-    <?php
-        include $plantillas .'cuatropost.php';
-        //include 'plantillas/cuatropost.php';
-    ?>
+
+    <section class="blog-home">
+        <div class="blog-home-header">
+            <h2 class="blog-home-title">Últimos artículos</h2>
+            <p class="blog-home-subtitle">Revisa nuestras publicaciones más recientes</p>
+        </div>
+
+        <?php
+            include $plantillas .'cuatropost.php';
+        ?>
+    </section>
+
 </div>
 
 <?php 
