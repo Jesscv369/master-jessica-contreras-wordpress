@@ -20,8 +20,8 @@
         <header class="site-header">
             <div class="header-inner">
                 <a class="site-logo" href="/">
-                    <img src="/imagenes/logo.svg" height="50" width="80" alt="SEOAdvantage">
-                    <span class="site-title">SEOAdvantage</span>
+                    <img src="/imagenes/logo.svg" height="50" width="80" alt="SEOTech">
+                    <span class="site-title">SEOTech</span>
                 </a>
             
                 <nav class="main-nav" aria-label="Menú principal">
