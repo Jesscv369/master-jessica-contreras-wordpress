@@ -18,7 +18,6 @@
 
       <div class="home-hero__cta">
         <a class="btn btn-primary" href="/contacto/">Solicitar auditoría</a>
-        <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
       </div>
     </div>
   </section>
@@ -79,20 +78,38 @@
       </article>
       <article class="service-card">        
         <div class="service-card__top">
-            <img class="service-icon" src="<?php echo get_template_directory_uri(); ?>/assets/icons/iconos-servicios/reports.svg" alt="" aria-hidden="true">
+            <img class="service-icon" src="<?php echo get_template_directory_uri(); ?>/assets/icons/iconos-servicios/migracion.svg" alt="" aria-hidden="true">
             <h3>
                 <a href="/reportes-seo/" class="service-card__link">
-                    Reportes SEO
+                    Migraciones SEO
                 </a>
             </h3>  
         </div>
         <p>
-          Reportes accionables orientados a negocio: visibilidad, rendimiento técnico, evolución de KPIs y oportunidades de mejora basadas en datos.
+          Migraciones SEO seguras basadas en auditoría previa, control de redirecciones e indexación, minimizando riesgos técnicos y preservando señales orgánicas clave.
         </p>
       </article>
-
     </div>
+     <!-- CTA SERVICIOS -->
+    <div class="services-cta">
+      <div class="services-cta__box">
+        <h3 class="services-cta__title">
+          ¿Quieres una auditoría técnica con hallazgos accionables?
+        </h3>
 
+        <p class="services-cta__text">
+          Te entrego un diagnóstico priorizado por impacto (SEO + performance)
+          con recomendaciones claras y KPIs medibles.
+        </p>
+
+        <div class="services-cta__actions">
+          <a class="btn btn-primary" href="/contacto/">
+            Solicitar auditoría
+          </a>
+          <a class="btn btn-secondary is-link" href="#servicios">Ver servicios <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -100,9 +117,9 @@
   <!-- BLOG / ÚLTIMOS ARTÍCULOS -->
   <section class="home-blog" id="blog">
     <div class="home-section__header">
-      <h2 class="home-section__title">Insights técnicos</h2>
+      <h2 class="home-section__title">Artículos de SEO Técnico</h2>
       <p class="home-section__subtitle">
-        Artículos y guías prácticas para mejorar performance, indexación y posicionamiento.
+        Contenido y guías prácticas para mejorar performance, indexación y posicionamiento.
       </p>
     </div>
 
@@ -119,5 +136,5 @@
   </section>
 
 </main>
-
+<?php get_template_part('plantillas/cta-final');?>
 <?php get_footer(); ?>

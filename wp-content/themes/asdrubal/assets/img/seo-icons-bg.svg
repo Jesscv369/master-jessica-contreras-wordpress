@@ -1,0 +1,26 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <g stroke="#3b22a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Icono: código -->
+    <polyline points="120,160 90,200 120,240" />
+    <polyline points="180,160 210,200 180,240" />
+
+    <!-- Icono: gráfico -->
+    <line x1="300" y1="250" x2="300" y2="190" />
+    <line x1="330" y1="250" x2="330" y2="170" />
+    <line x1="360" y1="250" x2="360" y2="210" />
+    <line x1="290" y1="250" x2="380" y2="250" />
+
+    <!-- Icono: buscador / SEO -->
+    <circle cx="500" cy="200" r="28" />
+    <line x1="520" y1="220" x2="550" y2="250" />
+
+    <!-- Icono: nodos / datos -->
+    <circle cx="650" cy="180" r="6" />
+    <circle cx="620" cy="220" r="6" />
+    <circle cx="680" cy="220" r="6" />
+    <line x1="650" y1="186" x2="620" y2="214" />
+    <line x1="650" y1="186" x2="680" y2="214" />
+
+  </g>
+</svg>

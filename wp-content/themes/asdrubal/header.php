@@ -20,14 +20,18 @@
         <header class="site-header">
             <div class="header-inner">
                 <a class="site-logo" href="/">
-                    <img src="/imagenes/logo.svg" height="50" width="80" alt="SEOTech">
-                    <span class="site-title">SEOTech</span>
+                    <img src="/imagenes/isotipo.svg" height="100px" width="100px" alt="SEOTech">
+                    <span class="site-title">SEO</span>
+                    <span class="site-title2">Tech</span>
                 </a>
             
                 <nav class="main-nav" aria-label="Menú principal">
                     <ul class="menu">
                         <li>
                             <a href="/" class="<?php echo is_front_page() ? 'active' : ''; ?>">Home</a>
+                        </li>
+                        <li>
+                            <a href="/servicios/" class="<?php echo is_page('servicios') ? 'active' : ''; ?>">Servicios</a>
                         </li>
 
                         <li>
