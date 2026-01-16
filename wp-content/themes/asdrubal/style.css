@@ -1446,6 +1446,13 @@ body{ overflow-y: auto; }
 /* =========================================================
    HERO SOBRE MI
    ========================================================= */
+   .page-sobre-mi{
+      background:
+      radial-gradient(900px 400px at 18% 15%, rgba(124,92,255,.08), transparent 60%),
+      radial-gradient(900px 400px at 82% 10%, rgba(242,161,199,.08), transparent 60%),
+      linear-gradient(to bottom, var(--color-bg) 0%, var(--color-bg-soft) 100%);
+   }
+   
    .page-sobre-mi .about-hero{
     padding: 50px 0 30px; /* ajusta aquí si quieres más/menos aire */
     background: radial-gradient(
@@ -1604,6 +1611,7 @@ body{ overflow-y: auto; }
 
 .page-sobre-mi .about-section{
   padding: 56px 0;
+  background: var(--color-bg);
 }
 
 .page-sobre-mi .section-head{
@@ -1621,6 +1629,7 @@ body{ overflow-y: auto; }
 
 .page-sobre-mi .about-content p{
   margin-bottom: 14px;
+  line-height: 1.6;
 }
 
 /* =========================================================
@@ -1666,29 +1675,475 @@ body{ overflow-y: auto; }
    SOBRE MI — QUIÉN SOY
    ========================================================= */
 
-.page-sobre-mi .about-section--who{
-  padding: 50px 0;
+.page-sobre-mi .about-who{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: end;
 }
 
-.page-sobre-mi .about-section--who .about-content{
-  max-width: 68ch;      /* lectura cómoda */
+.page-sobre-mi .about-who__content .about-content{
+  max-width: 70ch; /* mantiene lectura cómoda */
 }
 
-.page-sobre-mi .about-section--who .about-content p{
-  font-size: 1.05rem;
-  line-height: 1.65;
-  margin-bottom: 18px;
+.page-sobre-mi .about-who-card{
+  padding: 25px 15px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.55);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(124,92,255,.14);
+  box-shadow: var(--color-shadow);
+}
+
+.page-sobre-mi .about-who-card__title{
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.page-sobre-mi .about-who-card__list{
+  margin: 0;
+  padding-left: 18px;
   color: var(--color-text-muted);
+  line-height: 1.6;
 }
 
-/* Título */
-.page-sobre-mi .about-section--who h2{
-  margin-bottom: 22px;
+.page-sobre-mi .about-who-card__list li{
+  margin: 0 0 8px;
 }
+
+.page-sobre-mi .about-who-card__list strong{
+  color: var(--color-text);
+  font-weight: 800;
+}
+
 
 /* =========================================================
    FIN QUIÉN SOY
    ========================================================= */
+/* =========================================================
+   SOBRE MI – ESPECIALIZACIÓN (CHIPS)
+   ========================================================= */
+  /* 1) Separación visual (panel + líneas sutiles) */
+.page-sobre-mi .about-section--what{
+  position: relative;
+  padding: 72px 0;
+  background:
+    radial-gradient(900px 420px at 18% 20%, rgba(108,99,255,.10), transparent 60%),
+    radial-gradient(900px 420px at 82% 10%, rgba(242,161,199,.10), transparent 60%),
+    linear-gradient(to bottom, #ffffff 0%, #f4f2f8 100%);
+  border-top: 1px solid rgba(124,92,255,.12);
+  border-bottom: 1px solid rgba(124,92,255,.12);
+}
+
+.page-sobre-mi .about-section--what::after{
+  content:"";
+  position:absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: min(980px, calc(100% - 48px));
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(59,34,163,0),
+    rgba(108,99,255,.28),
+    rgba(59,34,163,0)
+  );
+  opacity: .9;
+  pointer-events:none;
+}
+
+/* 2) Layout 2 columnas */
+.page-sobre-mi .about-what__grid{
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: clamp(1.6rem, 3.5vw, 3rem);
+  align-items: start;
+}
+
+/* 3) Ajuste fino: ancho de lectura más pro */
+.page-sobre-mi .about-what__content .about-content{
+  max-width: 70ch;
+}
+
+/* 4) Chips (los tuyos, con mejor presencia) */
+.page-sobre-mi .about-spec{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0 22px;
+}
+
+.page-sobre-mi .about-spec__item{
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(124,92,255,.20);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 24px rgba(40, 24, 74, .06);
+}
+
+/* 5) Card glass derecha */
+.page-sobre-mi .about-card{
+  background: rgba(255,255,255,.58);
+  border: 1px solid rgba(124,92,255,.18);
+  border-radius: 18px;
+  padding: 22px 22px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 38px rgba(40, 24, 74, .10);
+}
+
+.page-sobre-mi .about-card__eyebrow{
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(59,34,163,.70);
+}
+
+.page-sobre-mi .about-card__title{
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.page-sobre-mi .about-card__list{
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  font-size: 14.5px;
+}
+
+.page-sobre-mi .about-card__list li{
+  position: relative;
+  padding-left: 22px;
+}
+
+.page-sobre-mi .about-card__list li::before{
+  content:"";
+  position:absolute;
+  left: 0;
+  top: .55em;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: rgba(108,99,255,.28);
+  box-shadow: 0 0 0 3px rgba(108,99,255,.10);
+}
+
+.page-sobre-mi .about-card__meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.page-sobre-mi .about-pill{
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(59,34,163,.85);
+  background: rgba(108,99,255,.10);
+  border: 1px solid rgba(108,99,255,.18);
+}
+
+
+/* =========================================================
+   FIN ESPECIALIZACIÓN
+   ========================================================= */
+/* =========================================================
+   SOBRE MI – CÓMO TRABAJO (TIMELINE PRO)
+   ========================================================= */
+  .page-sobre-mi .about-section--how{
+  position: relative;
+  padding: 64px 0;
+  background: var(--color-bg);
+}
+
+/* separador visual entre secciones sin “cortar” el diseño */
+.page-sobre-mi .about-section--how::before{
+  content:"";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: min(1100px, calc(100% - 48px));
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(59,34,163,0),
+    rgba(108,99,255,.28),
+    rgba(59,34,163,0)
+  );
+}
+
+.page-sobre-mi .about-how{
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(1.8rem, 4vw, 3.2rem);
+  align-items: center;
+}
+
+.page-sobre-mi .about-how__content .section-head{
+  margin-bottom: 14px;
+}
+
+.page-sobre-mi .about-how__lead{
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.page-sobre-mi .about-how__tagline{
+  margin-top: 16px;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.page-sobre-mi .about-how__visual{
+  justify-self: end;
+  width: 100%;
+  max-width: 520px; /* mismo “peso” que el visual de arriba */
+}
+
+.page-sobre-mi .about-flow__card{
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(124,92,255,.16);
+  background: rgba(255,255,255,.58);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--color-shadow);
+}
+
+.page-sobre-mi .about-flow__inner{
+  display: grid;
+  gap: 12px;
+}
+
+.page-sobre-mi .about-flow__step{
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 14px;
+  border-radius: 14px;
+  background: rgba(108,99,255,0.06);
+  border: 1px solid rgba(124,92,255,.14);
+}
+
+
+.page-sobre-mi .about-flow__step:last-child::after{
+  display: none;
+}
+
+.page-sobre-mi .about-flow__num{
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: #fff;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+  box-shadow: 0 10px 18px rgba(124,92,255,.16);
+}
+
+.page-sobre-mi .about-flow__text strong{
+  display: block;
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+
+.page-sobre-mi .about-flow__text span{
+  display: block;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+/* =========================================================
+   SOBRE MI — LAYOUT 2 COL (reutilizable)
+   ========================================================= */
+.page-sobre-mi .about-split{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(1.6rem, 4vw, 3.2rem);
+  align-items: start;
+}
+
+.page-sobre-mi .about-left .section-head{
+  margin-bottom: 14px;
+}
+
+/* =========================================================
+   REPORTING & DATOS — SECCIÓN (separación visual)
+   ========================================================= */
+.page-sobre-mi .about-section--data{
+  position: relative;
+  padding: 68px 0;
+  background:
+    radial-gradient(900px 380px at 18% 20%, rgba(108, 99, 255, 0.10), transparent 62%),
+    radial-gradient(900px 380px at 82% 10%, rgba(59, 34, 163, 0.06), transparent 60%),
+    linear-gradient(to bottom, #ffffff 0%, #ffffff 40%, rgba(244,242,248,.75) 100%);
+  border-top: 1px solid rgba(124,92,255,.10);
+  border-bottom: 1px solid rgba(124,92,255,.10);
+}
+
+.page-sobre-mi .about-section--data::after{
+  content:"";
+  position:absolute;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%);
+  width: min(980px, calc(100% - 48px));
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(59,34,163,0),
+    rgba(108,99,255,.28),
+    rgba(59,34,163,0)
+  );
+  opacity: .9;
+  pointer-events:none;
+}
+
+.page-sobre-mi .about-kicker{
+  margin: 0 0 14px;
+  color: var(--color-text);
+}
+
+.page-sobre-mi .about-section--data .about-content p{
+  margin: 0 0 14px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.page-sobre-mi .about-section--data .about-content p strong{
+  color: var(--color-text);
+  font-weight: 800;
+}
+
+/* =========================================================
+   REPORTING & DATOS — CARD DERECHA
+   ========================================================= */
+.page-sobre-mi .about-data-card{
+  padding: 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(124,92,255,.16);
+  background: rgba(255,255,255,.58);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 45px rgba(40, 24, 74, .10);
+}
+
+.page-sobre-mi .about-data-card__title{
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+}
+
+.page-sobre-mi .about-data-card__subtitle{
+  margin: 0 0 14px;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.page-sobre-mi .about-data-chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 14px;
+}
+
+.page-sobre-mi .about-data-chips .chip{
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-primary);
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.20);
+}
+
+/* métricas (no parecen botones) */
+.page-sobre-mi .about-data-metrics{
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.page-sobre-mi .about-metric{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(244,242,248,.7);
+  border: 1px solid rgba(124,92,255,.12);
+}
+
+.page-sobre-mi .about-metric__label{
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.page-sobre-mi .about-metric__value{
+  color: var(--color-text-muted);
+  font-weight: 650;
+  text-align: right;
+}
+
+/* nota final */
+.page-sobre-mi .about-data-note{
+  margin-top: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(124,92,255,.14);
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.page-sobre-mi .about-data-note p{
+  margin: 0;
+}
+
+.page-sobre-mi .about-data-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  margin-top: 6px;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px rgba(108,99,255,.15);
+}
+
 
 /* =========================
    11) RESPONSIVE (UNIFICADO)
@@ -1825,6 +2280,40 @@ body{ overflow-y: auto; }
     grid-template-columns: 1fr;
   }
   /*FIN  HERO SOBRE MI – RESPONSIVE*/
+  /*Sobre Mi - Mi experiencia*/
+  .page-sobre-mi .about-who{
+    grid-template-columns: 1fr;
+  }
+  .page-sobre-mi .about-what__grid{
+    grid-template-columns: 1fr;
+  }
+  .page-sobre-mi .about-card{
+    margin-top: 10px;
+  }
+  /* =========================================================
+   HERO SOBRE MI – Como trabajo
+   ========================================================= */
+  .page-sobre-mi .about-how{
+    grid-template-columns: 1fr;
+  }
+
+  .page-sobre-mi .about-how__visual{
+    justify-self: start;
+    max-width: 560px;
+  }
+
+  /* =========================================================
+   HERO SOBRE MI – Reporting
+   ========================================================= */
+
+  .page-sobre-mi .about-split{
+    grid-template-columns: 1fr;
+  }
+  .page-sobre-mi .about-section--data{
+    padding: 56px 0;
+  }
+
+
 }
 
 /* HOME + CARRUSEL */
