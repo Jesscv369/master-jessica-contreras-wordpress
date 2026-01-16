@@ -8,7 +8,7 @@
         <div>
           <span class="site-title">SEO</span>
           <span class="site-title2">Tech</span>
-          <div class="footer-tagline">SEO técnico para crecer sin errores.</div>
+          <div class="footer-tagline">Optimización técnica enfocada en performance y visibilidad orgánica.</div>
         </div>
       </div>
     </div>

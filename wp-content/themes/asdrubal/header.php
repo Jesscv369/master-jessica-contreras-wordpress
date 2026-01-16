@@ -17,48 +17,43 @@
     </head>
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
-        <header class="site-header">
+       <header class="site-header">
             <div class="header-inner">
-                <a class="site-logo" href="/">
-                    <img src="/imagenes/isotipo.svg" height="100px" width="100px" alt="SEOTech">
-                    <span class="site-title">SEO</span>
-                    <span class="site-title2">Tech</span>
-                </a>
-            
-                <nav class="main-nav" aria-label="Menú principal">
-                    <ul class="menu">
-                        <li>
-                            <a href="/" class="<?php echo is_front_page() ? 'active' : ''; ?>">Home</a>
-                        </li>
-                        <li>
-                            <a href="/servicios/" class="<?php echo is_page('servicios') ? 'active' : ''; ?>">Servicios</a>
-                        </li>
+              <a class="site-logo" href="/">
+                <img src="/imagenes/isotipo.svg" height="100" width="100" alt="SEOTech">
+                <span class="site-title">SEO</span>
+                <span class="site-title2">Tech</span>
+              </a>
 
-                        <li>
-                            <a href="/quienes-somos/" class="<?php echo is_page('quienes-somos') ? 'active' : ''; ?>">Quienes Somos</a>
-                        </li>
-
-                        <li>
-                            <a href="/blog/" class="<?php echo ( is_home() || is_page('blog') || is_singular('post') || is_category() || is_tag() || is_date() ) ? 'active' : ''; ?>">Blog</a>
-
-                        </li>
-
-                        <li class="nav-cta">
-                            <a href="/contacto/" class="<?php echo is_page('contacto') ? 'active' : ''; ?>">Contacto</a>
-                        </li>
-                    </ul>
-                </nav>
-
-
-            <!--<nav class="main-nav">
+              <!-- Botón mobile -->
+              <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+              </button>
+              <!-- Menú -->
+              <nav id="site-nav" class="main-nav" aria-label="Menú principal">
                 <ul class="menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/quienes-somos/">Quienes Somos</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li class="nav-cta"><a href="/contacto/">Contacto</a></li>
+                  <li><a href="/" class="<?php echo is_front_page() ? 'active' : ''; ?>">Home</a></li>
+              
+                  <li><a href="/servicios/" class="<?php echo is_page('servicios') ? 'active' : ''; ?>">Servicios</a></li>
+              
+                  <li><a href="/sobre-mi/" class="<?php echo is_page('sobre-mi') ? 'active' : ''; ?>">Sobre mí</a></li>
+              
+                  <li>
+                    <a href="/blog/" class="<?php echo ( is_home() || is_page('blog') || is_singular('post') || is_category() || is_tag() || is_date() ) ? 'active' : ''; ?>">
+                      Blog
+                    </a>
+                  </li>
+              
+                  <li class="nav-cta">
+                    <a href="/contacto/" class="<?php echo is_page('contacto') ? 'active' : ''; ?>">Contacto</a>
+                  </li>
                 </ul>
-            </nav>-->
+              </nav>
+
 
             </div>
         </header>
+
 

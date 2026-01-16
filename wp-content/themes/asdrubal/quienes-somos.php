@@ -69,7 +69,7 @@ get_header();
 
       <div class="qs-about__avatar">
         <img
-          src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/quienes-somos/avatar-illustration.png"
+          src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sobre-mi-somos/avatar-illustration.png"
           alt="Jessica Contreras"
           width="320" height="320"
           loading="lazy"

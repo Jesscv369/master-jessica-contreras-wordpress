@@ -1,6 +1,7 @@
 <section class="cta-final">
   <div class="cta-final__inner">
-    <h2>¿Tu sitio está preparado para escalar sin riesgos técnicos?</h2>
+    <h2>¿Tienes un proyecto que necesita una base técnica sólida para escalar?</h2>
+    <p>Si estás enfrentando una migración, problemas de visibilidad o necesitas claridad técnica para crecer, podemos revisarlo juntas.</p>
 
     <a href="/contacto" class="btn btn-primary">
       Agenda una llamada

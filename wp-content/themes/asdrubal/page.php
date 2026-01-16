@@ -1,21 +1,21 @@
 <?php
-//include_once 'header.php';
 get_header();
 ?>
 
 <div>
-    <div class="contenedortitulo">
-        <h1>
-            <?php the_title();?>
-        </h1>
-    </div>
 
-    <section id="contenido">
-        <?php echo the_content();?>
-    </section>
+  <?php if (function_exists('asdrubal_breadcrumbs')) { asdrubal_breadcrumbs(); } ?>
+
+  <div class="contenedortitulo">
+    <h1><?php the_title(); ?></h1>
+  </div>
+
+  <section id="contenido">
+    <?php the_content(); ?>
+  </section>
+
 </div>
 
-<?php 
-//include_once 'footer.php';
+<?php
 get_footer();
 ?>
