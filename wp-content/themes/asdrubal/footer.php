@@ -4,7 +4,7 @@
     <!-- Marca -->
     <div class="footer-card footer-brand">
       <div class="footer-logo">
-        <img src="/imagenes/isotipo.svg" width="56" height="56" alt="SEO Tech">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/isotipo.svg" width="56" height="56" alt="SEO Tech">
         <div>
           <span class="site-title">SEO</span>
           <span class="site-title2">Tech</span>

@@ -20,7 +20,7 @@
        <header class="site-header">
             <div class="header-inner">
               <a class="site-logo" href="/">
-                <img src="/imagenes/isotipo.svg" height="100" width="100" alt="SEOTech">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/isotipo.svg" height="100" width="100" alt="SEOTech">
                 <span class="site-title">SEO</span>
                 <span class="site-title2">Tech</span>
               </a>
@@ -34,20 +34,20 @@
               <!-- Menú -->
               <nav id="site-nav" class="main-nav" aria-label="Menú principal">
                 <ul class="menu">
-                  <li><a href="/" class="<?php echo is_front_page() ? 'active' : ''; ?>">Home</a></li>
+                  <li><a href="<?php echo esc_url( home_url('/') ); ?>" class="<?php echo is_front_page() ? 'active' : ''; ?>">Home</a></li>
+                              
+                  <li><a href="<?php echo esc_url( home_url('/servicios/') ); ?>" class="<?php echo is_page('servicios') ? 'active' : ''; ?>">Servicios</a></li>
               
-                  <li><a href="/servicios/" class="<?php echo is_page('servicios') ? 'active' : ''; ?>">Servicios</a></li>
-              
-                  <li><a href="/sobre-mi/" class="<?php echo is_page('sobre-mi') ? 'active' : ''; ?>">Sobre mí</a></li>
+                  <li><a href="<?php echo esc_url( home_url('/sobre-mi/') ); ?>" class="<?php echo is_page('sobre-mi') ? 'active' : ''; ?>">Sobre mí</a></li>
               
                   <li>
-                    <a href="/blog/" class="<?php echo ( is_home() || is_page('blog') || is_singular('post') || is_category() || is_tag() || is_date() ) ? 'active' : ''; ?>">
-                      Blog
-                    </a>
+                    <a href="<?php echo esc_url( home_url('/blog/') ); ?>"
+                    class="<?php echo ( is_home() || is_page('blog') || is_singular('post') || is_category() || is_tag() || is_date() ) ? 'active' : ''; ?>">
+                    Blog
+                    </a>                  
                   </li>
-              
                   <li class="nav-cta">
-                    <a href="/contacto/" class="<?php echo is_page('contacto') ? 'active' : ''; ?>">Contacto</a>
+                    <a href="<?php echo esc_url( home_url('/contacto/') ); ?>" class="<?php echo is_page('contacto') ? 'active' : ''; ?>">Contacto</a>
                   </li>
                 </ul>
               </nav>
