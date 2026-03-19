@@ -1,3 +1,15 @@
+# Canonical (HTTP -> HTTPS y WWW -> sin WWW)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.wordpress-jess\.local$ [NC,OR]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://wordpress-jess.local%{REQUEST_URI} [R=301,L]
+
+</IfModule>
+
+
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On

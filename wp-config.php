@@ -37,8 +37,8 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-define('WP_HOME', 'http://wordpress-jess.local');
-define('WP_SITEURL', 'http://wordpress-jess.local');
+define('WP_HOME', 'https://wordpress-jess.local');
+define('WP_SITEURL', 'https://wordpress-jess.local');
 
 
 /**#@+
